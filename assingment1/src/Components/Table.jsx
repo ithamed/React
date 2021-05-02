@@ -15,9 +15,9 @@ class Table extends Component {
             </tr>
           </thead>
           <tbody>
-          {this.props.todos.map(todo=>
-            <tr key={todo.id}>
-              <th scope="row">{todo.id}</th>
+          {this.props.todos.map((todo, index)=>
+            <tr key={index}>
+              <th scope="row">{index+1}</th>
               <td>{todo.title}</td>
               <td>{todo.description}</td>
               <td><button className="btn btn-danger" onClick={this.props.delTodo.bind(this, todo.id)}>Done</button></td>
